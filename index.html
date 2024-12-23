@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="h-[100vh] w-[100vw] flex  ">
+        <div id="sidebar" class="w-[21%] absolute -translate-x-80 lg:static lg:translate-x-0 h-full  bg-white lg:flex flex-col py-2 px-6 z-50 transition duration-300  "  >
+            <div class="h-[20%] text-center flex items-center    "><div class=""><img class="h-16 w-16" src="./images/logo-CjmiVqZs.png" alt=""></div><div class="text-start ml-2 "><h1 class="text-[#4318FF] text-3xl font-bold">OUR</h1><p class="text-[#4318FF] font-semibold">DASHBOARD</p> </div></div>
+            <div class="h-[80%] overflow-y-scroll flex flex-col gap-4 no-scrollbar">
+                <div class="p-2 text-start text-xl bg-[#4318FF] text-white rounded-lg duration-300 transition cursor-pointer   "><span><i class="me-4 fa-solid fa-table-columns"></i></span>Dashboard</div>
+                <div class="p-2 text-start text-xl hover:bg-gray-100 rounded-lg duration-300 transition text-gray-400 cursor-pointer "><span><i class="me-4 fa-solid fa-chart-line"></i></span>Activity</div>
+                <div class="p-2 text-start text-xl hover:bg-gray-100 rounded-lg duration-300 transition text-gray-400 cursor-pointer "><span><i class="me-4 fa-solid fa-book-open-reader"></i></span>Laboratry</div>
+                <div id="auth" class="p-2 text-start text-xl hover:bg-gray-100 rounded-lg duration-300 transition text-gray-600 cursor-pointer "><span><i class="me-4 fa-solid fa-user"></i></span>Authentications <span><i class="ms-2 text-xs fa-solid fa-angle-down"></i></span></div>
+                <div id="signin" class="p-2 hidden  text-start text-xl hover:bg-gray-100  rounded-lg duration-300 transition text-gray-600 cursor-pointer  items-center "><h1 class="me-4 w-5 h-full "></h1> Sign In </div>
+                <div id="signup" class="p-2 hidden text-start text-xl hover:bg-gray-100 rounded-lg duration-300 transition text-gray-600 cursor-pointer  items-center"><h1 class="me-4 w-5  h-full  " > </h1> Sign Up </div>
+
+                <div class="p-2 text-start text-xl hover:bg-gray-100 rounded-lg duration-300 transition text-gray-400 cursor-pointer "><span><i class="me-4 fa-solid fa-calendar-days"></i></span>Scedules</div>
+                <div class="p-2 text-start text-xl hover:bg-gray-100 rounded-lg duration-300 transition text-gray-400 cursor-pointer "><span><i class="me-4 fa-solid fa-check"></i></span>Payouts</div>
+                <div class="p-2 text-start text-xl hover:bg-gray-100 rounded-lg duration-300 transition text-gray-400 cursor-pointer "><span><i class="me-4 fa-solid fa-gear"></i></span>Settings</div>
+                <div class="p-2 text-start text-xl hover:bg-gray-100 rounded-lg duration-300 transition text-gray-400 cursor-pointer mt-20"><span><i class="me-4 fa-solid fa-right-from-bracket"></i></span>Log Out</div>
+            </div>
+
+        </div>
+        <div id="blackDiv" class="hidden bg-black opacity-30 absolute h-full w-full z-40 "></div>
+        <div id="states" class="top lg:w-[79%] w-full h-full bg-[#F4F7FE] p-2 overflow-y-scroll no-scrollbar " >
+            
+            <div class="flex justify-between items-center bg  h-[10%] md:py-2  md:px-5 px-5 lg:px-10">
+                <div class="flex gap-4 md:gap-8 items-center ">
+                    <div class="block lg:hidden"><img class=" h-10 w-10" src="./images/logo-CjmiVqZs.png" alt=""></div>
+                <div class="block lg:hidden " id="menu"><i class="fa-solid fa-bars text-2xl cursor-pointer"></i></div>
+                <div class="flex gap-4 rounded-lg bg-white p-2">
+                    <div><i class="fa-solid fa-magnifying-glass font-extralight text-gray-500"></i></div>
+                    <input type="text" placeholder="Search" class="outline-none w-28 lg:w-80" >
+                </div>
+                </div>
+                <div class=" flex items-center gap-4 md:gap-8">
+                    <div><i class="fa-solid fa-language text-xl md:text-2xl text-gray-500"></i></div>
+                    <div class="relative"><i class="fa-regular fa-bell text-xl md:text-2xl  text-gray-500"></i><div class="bg-red-500 rounded-full p-1 text-xs flex text-white font-semibold items-center justify-center h-5 w-5  absolute md:-top-2 -top-2 translate-x-2">2</div></div>
+                    <div><i class="fa-regular fa-user text-xl md:text-2xl  text-gray-500"></i></div>
+                </div>
+            </div>
+            <div class="h-auto w-full px-5 lg:px-10"> 
+                <div class=" w-full h-auto md:h-60 flex flex-wrap  py-4 gap-4 " >
+                    <div class="w-full md:w-[45%] h-[50%] bg-white rounded-lg flex-auto flex items-center justify-between p-4">
+                        <div>
+                            <h1 class=" text-sm font-semibold text-gray-400">Spent this month</h1>
+                            <h2 class=" font-bold text-2xl">$683.20</h2>
+
+                        </div>  
+                        <div class="flex items-center justify-center w-28 h-full"><img src="./images/download.png" alt="Image"> </div>
+                        
+                        
+                    </div>
+                    <div class="w-full md:w-[45%] h-[50%] bg-white rounded-lg flex-auto flex justify-between items-center p-4">
+                        <div class=" flex  gap-2 items-center">
+                            <div class="rounded-full bg-gradient-to-br from-gray-300 to-[#4318FF] h-16 w-16 flex justify-center items-center "><i class="fa-solid fa-user text-white text-3xl"></i></div>
+                            <div>
+                                <h1 class="text-sm text-gray-400 font-semibold">New clients</h1>
+                                <p class="font-bold text-2xl " >321</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-center w-28 h-full"><img src="images/download (3).png" alt="Image" class=""></div>
+
+                    </div>
+                    <div class="w-full md:w-[45%] h-[50%] bg-white rounded-lg flex-auto flex justify-between items-center p-4">
+                        <div class=" flex  gap-2 items-center">
+                            <div class="rounded-full bg-gradient-to-br from-gray-300 to-[#4318FF] h-16 w-16 flex justify-center items-center "><i class="fa-solid fa-chart-simple text-white text-3xl"></i></div>
+                            <div>
+                                <h1 class="text-sm text-gray-400   font-semibold">Earnings</h1>
+                                <p class="font-bold text-2xl " >$484.08</p>
+                            </div>
+                        </div>
+                        
+
+                    </div>
+                    <div class="w-full md:w-[45%] h-[50%] bg-white rounded-lg flex-auto flex justify-between items-center p-4 bg-gradient-to-br from-gray-300 to-[#4318FF]">
+                        <div class=" flex  gap-2 items-center">
+                            <div>
+                                <h1 class="text-sm text-white font-semibold">Activity</h1>
+                                <p class="font-bold text-2xl text-white " >$540.50</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-center w-28 h-full"><img src="images/download (2).png" alt="Image" class=""></div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="px-5 lg:px-10 flex flex-wrap md:flex-nowrap  h-96 py-4 gap-4" >
+                <div class="bg-white w-full md:w-[60%] h rounded-lg flex items-center justify-center" > <canvas id="myChart"  style="width:100%;max-width:100%"></canvas></div>
+                <div class="bg-white w-full  md:w-[40%] rounded-lg flex flex-col  gap-2 items-center py-4" >
+                    <div class="rounded-full h-40 w-40 bg-slate-200"> <img src="images/avatar-B1Kuiyxc.png" alt="Image" > </div>
+                    <div>
+                        <h1 class="font-bold text-3xl text-gray-600" >Charles Robbie</h1>
+                        <p class=" font-semibold text-gray-400 text-center"><span><i class="fa-solid fa-location-dot me-2 "></i></span>New York, USA</p>
+                    </div>
+                    <div class="flex items-center gap-4 mt-4" >
+                        <div class="flex-auto text-center">
+                            <h1 class="font-semibold text-gray-400 ">Projects</h1>
+                            <p class="text-2xl font-bold text-gray-600 ">78</p>
+                        </div>
+                        <div class="flex-auto text-center">
+                            <h1 class="font-semibold text-gray-400 ">Followers</h1>
+                            <p class="text-2xl font-bold text-gray-600">564</p>
+                        </div>
+                        <div class="flex-auto text-center">
+                            <h1 class="font-semibold text-gray-400 ">Followings</h1>
+                            <p class="text-2xl font-bold text-gray-600">34</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <script
+src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+</script>
+    <script src="script.js"></script>
+</body>
+</html> 
